@@ -1,0 +1,337 @@
+{
+ "date": "2026-10-11",
+ "entries": 12,
+ "detected": 1,
+ "weak_only": 1,
+ "tpr": 8.3,
+ "tpr_incl_weak": 16.7,
+ "rows": [
+  {
+   "id": "GHSA-hpmr-prr2-cqc4",
+   "pkg": "github.com/go-gitea/gitea",
+   "lang": "go",
+   "cwe": "CWE-94",
+   "vuln_tag": "v1.7.5",
+   "fix_tag": "v1.7.6",
+   "total_findings": 40,
+   "tp": 0,
+   "weak": 0,
+   "detected": false,
+   "weak_only": false,
+   "hits": [],
+   "weak_hits": []
+  },
+  {
+   "id": "GHSA-w8xw-7crf-h23x",
+   "pkg": "github.com/go-gitea/gitea",
+   "lang": "go",
+   "cwe": "CWE-88",
+   "vuln_tag": "v1.17.2",
+   "fix_tag": "v1.17.3",
+   "total_findings": 122,
+   "tp": 0,
+   "weak": 0,
+   "detected": false,
+   "weak_only": false,
+   "hits": [],
+   "weak_hits": []
+  },
+  {
+   "id": "GHSA-j5r2-4c8j-xc3m",
+   "pkg": "github.com/go-gitea/gitea",
+   "lang": "go",
+   "cwe": "CWE-601",
+   "vuln_tag": "v1.25.5",
+   "fix_tag": "v1.26.0",
+   "total_findings": 191,
+   "tp": 0,
+   "weak": 61,
+   "detected": false,
+   "weak_only": true,
+   "hits": [],
+   "weak_hits": [
+    {
+     "rule": "rules.sh-go-sql-concat",
+     "file": "src/models/migrations/base/db.go",
+     "line": 411,
+     "cwe": "CWE-89",
+     "truth_file": "models/migrations/base/db.go",
+     "cwe_match": false
+    },
+    {
+     "rule": "rules.sh-go-sql-concat",
+     "file": "src/models/migrations/base/db.go",
+     "line": 439,
+     "cwe": "CWE-89",
+     "truth_file": "models/migrations/base/db.go",
+     "cwe_match": false
+    },
+    {
+     "rule": "rules.sh-go-sql-concat",
+     "file": "src/models/migrations/base/db.go",
+     "line": 457,
+     "cwe": "CWE-89",
+     "truth_file": "models/migrations/base/db.go",
+     "cwe_match": false
+    },
+    {
+     "rule": "rules.sh-go-sql-concat",
+     "file": "src/models/migrations/base/db.go",
+     "line": 468,
+     "cwe": "CWE-89",
+     "truth_file": "models/migrations/base/db.go",
+     "cwe_match": false
+    },
+    {
+     "rule": "rules.sh-go-sql-concat",
+     "file": "src/models/migrations/base/db.go",
+     "line": 473,
+     "cwe": "CWE-89",
+     "truth_file": "models/migrations/base/db.go",
+     "cwe_match": false
+    },
+    {
+     "rule": "rules.sh-go-sql-concat",
+     "file": "src/models/migrations/base/db.go",
+     "line": 555,
+     "cwe": "CWE-89",
+     "truth_file": "models/migrations/base/db.go",
+     "cwe_match": false
+    },
+    {
+     "rule": "rules.sh-go-sql-concat",
+     "file": "src/models/migrations/base/db.go",
+     "line": 559,
+     "cwe": "CWE-89",
+     "truth_file": "models/migrations/base/db.go",
+     "cwe_match": false
+    },
+    {
+     "rule": "rules.sh-go-sql-concat",
+     "file": "src/models/migrations/base/db.go",
+     "line": 571,
+     "cwe": "CWE-89",
+     "truth_file": "models/migrations/base/db.go",
+     "cwe_match": false
+    }
+   ]
+  },
+  {
+   "id": "GHSA-36h2-95gj-w488",
+   "pkg": "github.com/go-gitea/gitea",
+   "lang": "go",
+   "cwe": "CWE-601",
+   "vuln_tag": "v1.4.2",
+   "fix_tag": "v1.4.3",
+   "total_findings": 33,
+   "tp": 0,
+   "weak": 0,
+   "detected": false,
+   "weak_only": false,
+   "hits": [],
+   "weak_hits": []
+  },
+  {
+   "id": "GHSA-r3gq-wxqf-q4gh",
+   "pkg": "github.com/go-gitea/gitea",
+   "lang": "go",
+   "cwe": "CWE-79",
+   "vuln_tag": "v1.5.0",
+   "fix_tag": "v1.5.1",
+   "total_findings": 36,
+   "tp": 0,
+   "weak": 0,
+   "detected": false,
+   "weak_only": false,
+   "hits": [],
+   "weak_hits": []
+  },
+  {
+   "id": "GHSA-q47x-6mqq-4w92",
+   "pkg": "github.com/go-gitea/gitea",
+   "lang": "go",
+   "cwe": "CWE-20",
+   "vuln_tag": "v1.7.5",
+   "fix_tag": "v1.7.6",
+   "total_findings": 40,
+   "tp": 0,
+   "weak": 0,
+   "detected": false,
+   "weak_only": false,
+   "hits": [],
+   "weak_hits": []
+  },
+  {
+   "id": "GHSA-7rp2-fm2h-wchj",
+   "pkg": "django",
+   "lang": "python",
+   "cwe": "CWE-79",
+   "vuln_tag": "2.2.1",
+   "fix_tag": "2.2.2",
+   "total_findings": 135,
+   "tp": 0,
+   "weak": 0,
+   "detected": false,
+   "weak_only": false,
+   "hits": [],
+   "weak_hits": []
+  },
+  {
+   "id": "GHSA-vq3h-3q7v-9prw",
+   "pkg": "django",
+   "lang": "python",
+   "cwe": "CWE-601",
+   "vuln_tag": "1.7.3",
+   "fix_tag": "1.7b4",
+   "total_findings": 153,
+   "tp": 2,
+   "weak": 19,
+   "detected": true,
+   "weak_only": false,
+   "hits": [
+    {
+     "rule": "rules.sh-python-hardcoded-secret",
+     "file": "src/django/db/backends/oracle/creation.py",
+     "line": 11,
+     "cwe": "",
+     "truth_file": "django/db/backends/oracle/creation.py",
+     "cwe_match": true
+    },
+    {
+     "rule": "rules.sh-python-subprocess-shell-true",
+     "file": "src/scripts/manage_translations.py",
+     "line": 75,
+     "cwe": "",
+     "truth_file": "scripts/manage_translations.py",
+     "cwe_match": true
+    }
+   ],
+   "weak_hits": [
+    {
+     "rule": "rules.sh-python-sql-execute-concat",
+     "file": "src/django/contrib/gis/db/backends/mysql/introspection.py",
+     "line": 18,
+     "cwe": "CWE-89",
+     "truth_file": "django/contrib/gis/db/backends/mysql/introspection.py",
+     "cwe_match": false
+    },
+    {
+     "rule": "rules.sh-python-sql-execute-concat",
+     "file": "src/django/contrib/gis/db/backends/postgis/schema.py",
+     "line": 107,
+     "cwe": "CWE-89",
+     "truth_file": "django/contrib/gis/db/backends/postgis/schema.py",
+     "cwe_match": false
+    },
+    {
+     "rule": "rules.sh-python-sql-execute-concat",
+     "file": "src/django/contrib/gis/db/backends/spatialite/creation.py",
+     "line": 99,
+     "cwe": "CWE-89",
+     "truth_file": "django/contrib/gis/db/backends/spatialite/creation.py",
+     "cwe_match": false
+    },
+    {
+     "rule": "rules.sh-python-sql-execute-concat",
+     "file": "src/django/contrib/gis/db/backends/spatialite/schema.py",
+     "line": 83,
+     "cwe": "CWE-89",
+     "truth_file": "django/contrib/gis/db/backends/spatialite/schema.py",
+     "cwe_match": false
+    },
+    {
+     "rule": "rules.sh-python-sql-execute-concat",
+     "file": "src/django/contrib/gis/db/backends/spatialite/schema.py",
+     "line": 121,
+     "cwe": "CWE-89",
+     "truth_file": "django/contrib/gis/db/backends/spatialite/schema.py",
+     "cwe_match": false
+    },
+    {
+     "rule": "rules.sh-python-sql-execute-concat",
+     "file": "src/django/contrib/gis/db/backends/spatialite/schema.py",
+     "line": 132,
+     "cwe": "CWE-89",
+     "truth_file": "django/contrib/gis/db/backends/spatialite/schema.py",
+     "cwe_match": false
+    },
+    {
+     "rule": "rules.sh-python-sql-execute-concat",
+     "file": "src/django/contrib/gis/db/backends/spatialite/schema.py",
+     "line": 144,
+     "cwe": "CWE-89",
+     "truth_file": "django/contrib/gis/db/backends/spatialite/schema.py",
+     "cwe_match": false
+    },
+    {
+     "rule": "rules.sh-python-sql-execute-concat",
+     "file": "src/django/contrib/gis/db/backends/spatialite/schema.py",
+     "line": 153,
+     "cwe": "CWE-89",
+     "truth_file": "django/contrib/gis/db/backends/spatialite/schema.py",
+     "cwe_match": false
+    }
+   ]
+  },
+  {
+   "id": "GHSA-9cwg-mhxf-hh59",
+   "pkg": "django",
+   "lang": "python",
+   "cwe": "CWE-601",
+   "vuln_tag": "1.5.1",
+   "fix_tag": "1.5.2",
+   "total_findings": 102,
+   "tp": 0,
+   "weak": 0,
+   "detected": false,
+   "weak_only": false,
+   "hits": [],
+   "weak_hits": []
+  },
+  {
+   "id": "GHSA-rv95-896h-c2vc",
+   "pkg": "express",
+   "lang": "javascript",
+   "cwe": "CWE-601",
+   "vuln_tag": "v4.22.3",
+   "fix_tag": "v5.0.0-beta.3",
+   "total_findings": 22,
+   "tp": 0,
+   "weak": 0,
+   "detected": false,
+   "weak_only": false,
+   "hits": [],
+   "weak_hits": []
+  },
+  {
+   "id": "GHSA-7px7-7xjx-hxm8",
+   "pkg": "marked",
+   "lang": "javascript",
+   "cwe": "CWE-79",
+   "vuln_tag": "v0.3.6",
+   "fix_tag": "v0.3.7",
+   "total_findings": 4,
+   "tp": 0,
+   "weak": 0,
+   "detected": false,
+   "weak_only": false,
+   "hits": [],
+   "weak_hits": []
+  },
+  {
+   "id": "GHSA-qw6h-vgh9-j6wx",
+   "pkg": "express",
+   "lang": "javascript",
+   "cwe": "CWE-79",
+   "vuln_tag": "v4.22.3",
+   "fix_tag": "v5.0.0",
+   "total_findings": 22,
+   "tp": 0,
+   "weak": 0,
+   "detected": false,
+   "weak_only": false,
+   "hits": [],
+   "weak_hits": []
+  }
+ ]
+}
