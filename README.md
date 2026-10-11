@@ -12,6 +12,7 @@ Every claim ScanHub makes about detection comes from this repo. No curated scree
 | `ops/benchmark.py` | The harness: public REST API only, SHA-256-pinned app archive, regression gate |
 | `docs/detection-evidence.md` | The proof chain and the honest "what we do NOT claim" section |
 | `docs/benchmark-architecture.md` | The 3-tier benchmark design: replay, coverage, precision |
+| `evidence/replay-*.json` + `docs/bench-replay.md` | The CVE replay corpus: real CVEs in pinned versions, scored against our rules, published even though the score is low (it is our gap radar, not a detection claim) |
 
 ## Headline numbers (verified 2026-10-11)
 
