@@ -1,11 +1,11 @@
 # ScanHub detection evidence — juice-shop
 
 - **Date:** 2026-10-11
-- **ScanHub build:** `3b65f49` @ `http://localhost:8080`
+- **ScanHub build:** `ab14957` @ `http://localhost:8080`
 - **Rules:** 69 original ScanHub rules (go-web.yaml, go.yaml, iac.yaml, javascript-node.yaml, javascript.yaml, parity2.yaml, parity3.yaml, python-sql.yaml, python.yaml)
 - **Engines:** opengrep `1.16.4` · gitleaks `gitleaks version v8.30.1`
 - **Benchmark source:** https://codeload.github.com/juice-shop/juice-shop/tar.gz/refs/heads/master (sha256 `528b302ebf8abc48…`)
-- **Scan id:** `c989f15a-2872-45dd-81a8-6c59f96e2615`
+- **Scan id:** `1e37b87e-8ea5-4cd0-bfc8-221dce4cd7bb`
 
 **Result: 84 findings** — 48 high, 36 medium
 
@@ -37,8 +37,8 @@
 | `rules.sh-js-remote-property-injection` | opengrep | 1 |
 | `rules.sh-js-sequelize-raw-sql` | opengrep | 1 |
 | `rules.sh-js-jwt-verify-disabled` | opengrep | 1 |
-| `rules.sh-js-html-inject-concat` | opengrep | 1 |
 | `rules.sh-js-script-tag-strip-sanitizer` | opengrep | 1 |
+| `rules.sh-js-html-inject-concat` | opengrep | 1 |
 | `rules.sh-gha-mutable-action-ref` | opengrep | 1 |
 | `rules.sh-js-property-chain-walk` | opengrep | 1 |
 | `rules.sh-js-hardcoded-secret` | opengrep | 1 |

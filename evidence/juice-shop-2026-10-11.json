@@ -436,22 +436,22 @@
    "verdict": "unreviewed"
   },
   {
-   "rule": "rules.sh-js-html-inject-concat",
+   "rule": "rules.sh-js-script-tag-strip-sanitizer",
    "severity": "high",
-   "cwe": "cwe-79",
-   "title": "rules.sh-js-html-inject-concat",
-   "message": "HTML injection via string concatenation: user data spliced into markup containing tags/attributes enables XSS.",
+   "cwe": "cwe-80",
+   "title": "rules.sh-js-script-tag-strip-sanitizer",
+   "message": "Bypassable XSS sanitizer: stripping/replace-ing '<script' substrings does not stop XSS (event handlers, <img onerror>, case tricks). Use a real sanitizer (DOMPurify) or context-aware escaping.",
    "file": "juice-shop-master/routes/videoHandler.ts",
    "line": 71,
    "engine": "opengrep",
    "verdict": "unreviewed"
   },
   {
-   "rule": "rules.sh-js-script-tag-strip-sanitizer",
+   "rule": "rules.sh-js-html-inject-concat",
    "severity": "high",
-   "cwe": "cwe-80",
-   "title": "rules.sh-js-script-tag-strip-sanitizer",
-   "message": "Bypassable XSS sanitizer: stripping/replace-ing '<script' substrings does not stop XSS (event handlers, <img onerror>, case tricks). Use a real sanitizer (DOMPurify) or context-aware escaping.",
+   "cwe": "cwe-79",
+   "title": "rules.sh-js-html-inject-concat",
+   "message": "HTML injection via string concatenation: user data spliced into markup containing tags/attributes enables XSS.",
    "file": "juice-shop-master/routes/videoHandler.ts",
    "line": 71,
    "engine": "opengrep",
@@ -913,7 +913,7 @@
    "verdict": "unreviewed"
   }
  ],
- "scan_id": "c989f15a-2872-45dd-81a8-6c59f96e2615",
+ "scan_id": "1e37b87e-8ea5-4cd0-bfc8-221dce4cd7bb",
  "severity_counts": {
   "high": 48,
   "medium": 36
@@ -922,7 +922,7 @@
  "app": "juice-shop",
  "app_zip_sha256": "528b302ebf8abc488e72da1ee226ea965e9c5bc47204b81f5205148648a1659b",
  "environment": {
-  "timestamp_utc": "2026-10-11T09:40:04.675869+00:00",
+  "timestamp_utc": "2026-10-11T13:42:16.159145+00:00",
   "host": "SIGMA",
   "python": "3.11.16",
   "opengrep": "1.16.4",
@@ -939,6 +939,6 @@
    "python.yaml"
   ],
   "rule_count": 69,
-  "scanhub_commit": "3b65f49"
+  "scanhub_commit": "ab14957"
  }
 }
