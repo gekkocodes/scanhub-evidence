@@ -22,7 +22,7 @@ Every claim ScanHub makes about detection comes from this repo. No curated scree
 - **106 original rules**, MIT-licensed, written from scratch (no restricted third-party rule content)
 - **CI detection floor**: every push re-scans the pinned app; total below 90% of the committed floor pack (`evidence/juice-shop-floor.json`, 126 findings / 32 rules, OpenGrep scope) or any pack rule dropping to zero fails the build
 - **4 candidate false positives** across ScanHub's own codebase under the precision tier, all audited as contextual (the code is safe in context)
-- **CVE replay: 0/13 detected** (round 3, 13 QA'd entries across Gitea, Django, Express, marked, serve-static; round 4 rebuilt 8 entries with PR-grade fix-commit truth and re-scored: still 0/13). Pattern rules cannot follow multi-layer dataflow; we publish this instead of hiding it. Detection claims rest on the coverage and precision tiers.
+- **CVE replay: 1/13 detected** (round 5; 13 QA'd entries across Gitea, Django, Express, marked, serve-static; rounds 3-4 scored 0/13, then targeted rules written from the published miss list moved the number: `gap601` now catches Gitea GHSA-36h2-95gj-w488 with 4 true positives at the fix-commit coordinates). The remaining 12 misses are framework-internal or absence-of-validation fixes that pattern rules structurally cannot reach; we publish this instead of hiding it. The replay corpus is a gap radar that demonstrably closes, not a detection claim. Detection claims rest on the coverage and precision tiers.
 
 ## Reproduce it
 

@@ -20,7 +20,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 BENCH = os.path.join(ROOT, "bench")
 RULES = os.path.join(ROOT, "rules")
-DOCKER_IMG = "ipvsix/opengrep:latest"
+DOCKER_IMG = os.environ.get("OPENGREP_IMAGE", "ipvsix/opengrep:latest")
 LINE_SLACK = 5
 
 

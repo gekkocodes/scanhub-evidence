@@ -200,3 +200,30 @@ on Juice Shop) target the *misuse* class these CVEs exemplify, but the
 corpus entries themselves live in framework internals where pattern rules
 structurally cannot reach. The radar stands; the engine that closes it is
 still an open question we publish rather than paper over.
+
+## Round 5 (2026-10-13): the radar closes - 1/13 (7.7%)
+
+After writing `rules/gap601.yaml` (cookie-decoded redirect targets and
+variable redirect targets, both CWE-601) directly from the round-3/4 miss
+list, the re-score moved for the first time: **1/13 detected**, GHSA-36h2-95gj-w488
+(Gitea open redirect) with 4 true-positive hits at the fix-site files.
+
+That is the feedback loop this benchmark exists to prove: a published miss
+becomes a targeted rule, and the next score line proves the rule fires on
+the real CVE at the real fix coordinates - not on a synthetic fixture.
+
+The remaining 12 misses were re-audited against their fix diffs and split
+into two honest buckets:
+
+- **Framework internals** (Django URL/XSS plumbing, express `response.js`,
+  marked.js): the vulnerable pattern *is* the framework, so app-level
+  pattern rules structurally cannot fire. Corpus keeps them as published
+  ceilings, not as TODOs.
+- **Absence-of-validation fixes** (Gitea mirror/wiki URL validation,
+  `AddArguments(revision...)` arg injection): the fix *adds* a guard; a
+  pattern rule cannot detect a missing check without taint tracking. These
+  stay on the radar for a dataflow engine, which we do not ship yet.
+
+Floor claim stays conservative: pattern rules detect misuse shapes at
+published coordinates, and the number will only move when a rule earns it
+on real CVE code.

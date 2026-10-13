@@ -1,10 +1,10 @@
 {
  "date": "2026-10-13",
  "entries": 13,
- "detected": 0,
+ "detected": 1,
  "weak_only": 0,
- "tpr": 0.0,
- "tpr_incl_weak": 0.0,
+ "tpr": 7.7,
+ "tpr_incl_weak": 7.7,
  "rows": [
   {
    "id": "GHSA-hpmr-prr2-cqc4",
@@ -13,7 +13,7 @@
    "cwe": "CWE-94",
    "vuln_tag": "v1.7.5",
    "fix_tag": "v1.7.6",
-   "total_findings": 40,
+   "total_findings": 51,
    "tp": 0,
    "weak": 0,
    "detected": false,
@@ -28,7 +28,7 @@
    "cwe": "CWE-88",
    "vuln_tag": "v1.17.2",
    "fix_tag": "v1.17.3",
-   "total_findings": 122,
+   "total_findings": 135,
    "tp": 0,
    "weak": 0,
    "detected": false,
@@ -43,12 +43,45 @@
    "cwe": "CWE-601",
    "vuln_tag": "v1.4.2",
    "fix_tag": "v1.4.3",
-   "total_findings": 33,
-   "tp": 0,
+   "total_findings": 42,
+   "tp": 4,
    "weak": 0,
-   "detected": false,
+   "detected": true,
    "weak_only": false,
-   "hits": [],
+   "hits": [
+    {
+     "rule": "rules.sh-go-open-redirect-cookie-target",
+     "file": "src/routers/user/auth.go",
+     "line": 346,
+     "cwe": "CWE-601",
+     "truth_file": "routers/user/auth.go",
+     "cwe_match": true
+    },
+    {
+     "rule": "rules.sh-go-redirect-variable-target",
+     "file": "src/routers/user/auth.go",
+     "line": 349,
+     "cwe": "CWE-601",
+     "truth_file": "routers/user/auth.go",
+     "cwe_match": true
+    },
+    {
+     "rule": "rules.sh-go-open-redirect-cookie-target",
+     "file": "src/routers/user/auth.go",
+     "line": 436,
+     "cwe": "CWE-601",
+     "truth_file": "routers/user/auth.go",
+     "cwe_match": true
+    },
+    {
+     "rule": "rules.sh-go-redirect-variable-target",
+     "file": "src/routers/user/auth.go",
+     "line": 438,
+     "cwe": "CWE-601",
+     "truth_file": "routers/user/auth.go",
+     "cwe_match": true
+    }
+   ],
    "weak_hits": []
   },
   {
@@ -58,7 +91,7 @@
    "cwe": "CWE-79",
    "vuln_tag": "v1.5.0",
    "fix_tag": "v1.5.1",
-   "total_findings": 36,
+   "total_findings": 45,
    "tp": 0,
    "weak": 0,
    "detected": false,
@@ -73,7 +106,7 @@
    "cwe": "CWE-20",
    "vuln_tag": "v1.7.5",
    "fix_tag": "v1.7.6",
-   "total_findings": 40,
+   "total_findings": 51,
    "tp": 0,
    "weak": 0,
    "detected": false,
@@ -103,7 +136,7 @@
    "cwe": "CWE-601",
    "vuln_tag": "1.4.12",
    "fix_tag": "1.4.13",
-   "total_findings": 96,
+   "total_findings": 97,
    "tp": 0,
    "weak": 0,
    "detected": false,
@@ -118,7 +151,7 @@
    "cwe": "CWE-601",
    "vuln_tag": "1.4.5",
    "fix_tag": "1.4.6",
-   "total_findings": 96,
+   "total_findings": 97,
    "tp": 0,
    "weak": 0,
    "detected": false,
