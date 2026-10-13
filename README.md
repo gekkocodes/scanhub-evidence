@@ -17,7 +17,7 @@ Every claim ScanHub makes about detection comes from this repo. No curated scree
 
 ## Headline numbers (verified 2026-10-13)
 
-- **177 findings** on OWASP Juice Shop (20 critical, 69 high, 48 medium, 40 low) = 82 OpenGrep + 89 Trivy dependency advisories + 6 Gitleaks secrets, zero fixture noise
+- **177 findings** on OWASP Juice Shop (20 critical, 70 high, 47 medium, 40 low) = 82 OpenGrep + 89 Trivy dependency advisories + 6 Gitleaks secrets, zero fixture noise
 - **450 findings** on PyGoat across 4 engines (OSV, bandit, opengrep, gitleaks)
 - **106 original rules**, MIT-licensed, written from scratch (no restricted third-party rule content)
 - **CI detection floor**: every push re-scans the pinned app; total below 90% of the committed floor pack (`evidence/juice-shop-floor.json`, 126 findings / 32 rules, OpenGrep scope) or any pack rule dropping to zero fails the build

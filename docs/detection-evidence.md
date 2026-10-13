@@ -32,7 +32,7 @@ claim yourself before you pay us a dollar.*
 
 | Benchmark | Findings | Rules | Evidence pack |
 |---|---|---|---|
-| OWASP Juice Shop (master) | 177 (20 critical, 69 high, 48 medium, 40 low) = 82 OpenGrep + 89 Trivy (deps) + 6 Gitleaks | 86 original ScanHub rules | `evidence/juice-shop-*.md` |
+| OWASP Juice Shop (master) | 177 (20 critical, 70 high, 47 medium, 40 low) = 82 OpenGrep + 89 Trivy (deps) + 6 Gitleaks | 106 original ScanHub rules | `evidence/juice-shop-*.md` |
 
 Rule-by-rule breakdown is inside each evidence pack. The rule corpus is
 100% original (MIT); see `LICENSES.md` - we ship no third-party restricted
@@ -49,6 +49,12 @@ rule content, so nothing we detect depends on a license a competitor owns.
 - **False positives exist.** Every finding carries rule ID, file, line, and
   snippet so a human can confirm in seconds; AI triage (BYO-LLM) pre-sorts
   verdicts, and the fix-verification loop re-scans to prove fixes stuck.
+- **Parser gaps are skipped, not silently mis-scored.** OpenGrep's TypeScript
+  grammar cannot parse some valid TS (e.g. `unique symbol` type annotations);
+  those files are skipped for the affected rules. A file that fails to parse
+  never turns a scan red, but it also is not scanned - treat "clean" as
+  "clean among parsed files". Rule-corpus errors, by contrast, fail the scan
+  closed.
 
 ## Sales one-liner
 

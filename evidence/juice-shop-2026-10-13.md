@@ -1,13 +1,13 @@
 # ScanHub detection evidence — juice-shop
 
 - **Date:** 2026-10-13
-- **ScanHub build:** `03bc66a` @ `http://localhost:8080`
-- **Rules:** 86 original ScanHub rules (batch4.yaml, go-web.yaml, go.yaml, iac.yaml, javascript-node.yaml, javascript.yaml, parity2.yaml, parity3.yaml, python-sql.yaml, python.yaml, redirect-sinks.yaml)
+- **ScanHub build:** `9e197bb` @ `http://localhost:8080`
+- **Rules:** 106 original ScanHub rules (batch4.yaml, batch5.yaml, gap601.yaml, go-web.yaml, go.yaml, iac.yaml, javascript-node.yaml, javascript.yaml, parity2.yaml, parity3.yaml, python-sql.yaml, python.yaml, redirect-sinks.yaml)
 - **Engines:** opengrep `1.16.4` · gitleaks `gitleaks version v8.30.1`
 - **Benchmark source:** https://codeload.github.com/juice-shop/juice-shop/tar.gz/refs/heads/master (sha256 `528b302ebf8abc48…`)
-- **Scan id:** `83b43920-e22d-4e67-b074-eb5ea277ec61`
+- **Scan id:** `548bc160-9243-4f1b-8998-8716175a02bb`
 
-**Result: 177 findings** — 20 critical, 69 high, 40 low, 48 medium
+**Result: 177 findings** — 20 critical, 70 high, 40 low, 47 medium
 
 ## Findings by rule
 
@@ -49,7 +49,8 @@
 | `rules.sh-js-jwt-decode-unverified` | opengrep | 1 |
 | `rules.sh-js-path-resolve-user-input` | opengrep | 1 |
 | `rules.sh-js-remote-property-injection` | opengrep | 1 |
-| `rules.sh-js-sequelize-raw-sql` | opengrep | 1 |
+| `rules.sh-js-sql-string-concat` | opengrep | 1 |
+| `rules.sh-js-sequelize-raw-sql, rules.sh-js-sql-string-concat` | opengrep | 1 |
 | `rules.sh-js-jwt-decode-unverified, rules.sh-js-jwt-verify-disabled` | opengrep | 1 |
 | `rules.sh-js-script-tag-strip-sanitizer` | opengrep | 1 |
 | `rules.sh-js-html-inject-concat` | opengrep | 1 |
@@ -58,7 +59,6 @@
 | `rules.sh-gha-mutable-action-ref` | opengrep | 1 |
 | `rules.sh-js-property-chain-walk` | opengrep | 1 |
 | `rules.sh-js-hardcoded-secret` | opengrep | 1 |
-| `rules.sh-js-prototype-pollution-loop` | opengrep | 1 |
 | `rules.sh-js-fetch-user-url` | opengrep | 1 |
 | `rules.sh-js-cors-wildcard-middleware` | opengrep | 1 |
 
