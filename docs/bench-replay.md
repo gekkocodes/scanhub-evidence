@@ -185,3 +185,18 @@ framework-level XSS). Round 4 belongs to whatever engine closes dataflow -
 Joern is parked (see joern-spike.md), single-shot LLM audit is measured and
 rejected (see probe below), so the honest answer today is: nobody has, and
 we publish that instead of pretending.
+
+## Round 4 (2026-10-13): PR-grade ground truth, same verdict
+
+The corpus builder now resolves `/commit/<sha>` references inside GHSA
+advisories, so 8 of 13 entries carry fix coordinates taken from the actual
+fix commit instead of tag-diff inference. Re-scored on the rebuilt corpus:
+**still 0/13.** The misses are structural (multi-layer dataflow, framework
+internals), not labeling artifacts - better truth did not move the number,
+which is exactly what a floor measurement should look like when it is real.
+
+The new app-level redirect-sink rules (`rules/redirect-sinks.yaml`, 7 hits
+on Juice Shop) target the *misuse* class these CVEs exemplify, but the
+corpus entries themselves live in framework internals where pattern rules
+structurally cannot reach. The radar stands; the engine that closes it is
+still an open question we publish rather than paper over.

@@ -15,13 +15,14 @@ Every claim ScanHub makes about detection comes from this repo. No curated scree
 | `evidence/replay-*.json` + `evidence/corpus.json` + `docs/bench-replay.md` | The CVE replay corpus: real CVEs in pinned versions, scored against our rules, published even though the score is low (it is our gap radar, not a detection claim) |
 | `ops/corpus_build.py`, `ops/replay_score.py`, `ops/corpus_qa.py` | The replay pipeline: build the corpus from OSV + fix commits, QA the ground truth, score TPR |
 
-## Headline numbers (verified 2026-10-11, replay round 3: 2026-10-13)
+## Headline numbers (verified 2026-10-13)
 
-- **84 findings** on OWASP Juice Shop (48 high, 36 medium), main-source only, zero fixture noise
+- **176 findings** on OWASP Juice Shop (20 critical, 68 high, 48 medium, 40 low) = 81 OpenGrep + 89 Trivy dependency advisories + 6 Gitleaks secrets, zero fixture noise
 - **450 findings** on PyGoat across 4 engines (OSV, bandit, opengrep, gitleaks)
-- **69 original rules**, MIT-licensed, written from scratch (no restricted third-party rule content)
+- **72 original rules**, MIT-licensed, written from scratch (no restricted third-party rule content)
+- **CI detection floor**: every push re-scans the pinned app; total below 90% of the committed floor pack (`evidence/juice-shop-floor.json`, 124 findings / 31 rules, OpenGrep scope) or any pack rule dropping to zero fails the build
 - **4 candidate false positives** across ScanHub's own codebase under the precision tier, all audited as contextual (the code is safe in context)
-- **CVE replay: 0/13 detected** (round 3, 13 QA'd entries across Gitea, Django, Express, marked, serve-static). Pattern rules cannot follow multi-layer dataflow; we publish this instead of hiding it. Detection claims rest on the coverage and precision tiers.
+- **CVE replay: 0/13 detected** (round 3, 13 QA'd entries across Gitea, Django, Express, marked, serve-static; round 4 rebuilt 8 entries with PR-grade fix-commit truth and re-scored: still 0/13). Pattern rules cannot follow multi-layer dataflow; we publish this instead of hiding it. Detection claims rest on the coverage and precision tiers.
 
 ## Reproduce it
 

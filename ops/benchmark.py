@@ -108,9 +108,16 @@ def main():
     fp = env_fingerprint(a.url)
 
     log("creating project…")
-    proj = json.loads(http(a.url + "/api/v1/projects",
-        data=json.dumps({"name": f"Bench: {a.app}"}).encode(),
-        headers={"Authorization": "Bearer " + token, "Content-Type": "application/json"}).read())["id"]
+    hdr = {"Authorization": "Bearer " + token, "Content-Type": "application/json"}
+    plist = json.loads(http(a.url + "/api/v1/projects", headers=hdr).read())
+    if isinstance(plist, dict):
+        plist = plist.get("projects", plist.get("items", []))
+    existing = [p for p in plist if p.get("name") == f"Bench: {a.app}"]
+    if existing:
+        proj = existing[0]["id"]  # reuse: repeated runs must not creep the app cap
+    else:
+        proj = json.loads(http(a.url + "/api/v1/projects",
+            data=json.dumps({"name": f"Bench: {a.app}"}).encode(), headers=hdr).read())["id"]
 
     log("uploading source…")
     boundary = "bench" + "0" * 8

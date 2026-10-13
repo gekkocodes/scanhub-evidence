@@ -32,7 +32,7 @@ claim yourself before you pay us a dollar.*
 
 | Benchmark | Findings | Rules | Evidence pack |
 |---|---|---|---|
-| OWASP Juice Shop (master) | 84 (48 high, 36 medium) | 69 original ScanHub rules | `evidence/juice-shop-*.md` |
+| OWASP Juice Shop (master) | 176 (20 critical, 68 high, 48 medium, 40 low) = 81 OpenGrep + 89 Trivy (deps) + 6 Gitleaks | 72 original ScanHub rules | `evidence/juice-shop-*.md` |
 
 Rule-by-rule breakdown is inside each evidence pack. The rule corpus is
 100% original (MIT); see `LICENSES.md` - we ship no third-party restricted
@@ -44,7 +44,7 @@ rule content, so nothing we detect depends on a license a competitor owns.
   exploitability. Runtime/business-logic verification is a separate lane
   (DAST integration on the roadmap).
 - **Not "all" vulnerabilities.** The benchmark measures what our current rule
-  set detects on one codebase; the honest number is "84 findings, mapped to
+  set detects on one codebase; the honest number is "176 findings, mapped to
   rule IDs you can inspect", never "100% coverage".
 - **False positives exist.** Every finding carries rule ID, file, line, and
   snippet so a human can confirm in seconds; AI triage (BYO-LLM) pre-sorts

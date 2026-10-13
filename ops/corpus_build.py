@@ -114,6 +114,10 @@ def pr_fix_commits(gid, repo_url):
         return []
     shas = []
     for ref in adv.get("references", []):
+        mc = re.match(r"https://github\.com/([\w.-]+)/([\w.-]+)/commit/([0-9a-f]{7,40})$", ref)
+        if mc and repo_url.rstrip("/") == f"https://github.com/{mc.group(1)}/{mc.group(2)}":
+            shas.append(mc.group(3))
+            continue
         m = re.match(r"(https://github\.com/([\w.-]+)/([\w.-]+))/pull/(\d+)$", ref)
         if not m or m.group(1) != repo_url.rstrip("/"):
             continue
@@ -292,8 +296,17 @@ def main():
             print(f"   OK: {e['vuln_tag']} -> {e['fix_tag']}, {len(e['truth'])} truth files")
             out.append(e)
     p = os.path.join(BENCH, "corpus.json")
-    json.dump(out, open(p, "w", encoding="utf-8"), indent=1)
-    print(f"\n[corpus] wrote {p}: {len(out)} entries, {len(fails)} skipped")
+    # Merge with the existing corpus: --only rebuilds must not drop the others.
+    existing = []
+    if os.path.exists(p):
+        try:
+            existing = json.load(open(p, encoding="utf-8"))
+        except Exception:
+            existing = []
+    rebuilt = {e["id"] for e in out}
+    merged = out + [e for e in existing if e.get("id") not in rebuilt]
+    json.dump(merged, open(p, "w", encoding="utf-8"), indent=1)
+    print(f"\n[corpus] wrote {p}: {len(out)} rebuilt, {len(merged)} total, {len(fails)} skipped")
     for f in fails:
         fid = f.get("id") or f.get("seed", {}).get("id", "?")
         print("  fail:", fid, "-", f["error"])
