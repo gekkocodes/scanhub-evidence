@@ -1,0 +1,1361 @@
+[
+ {
+  "id": "GHSA-hpmr-prr2-cqc4",
+  "pkg": "github.com/go-gitea/gitea",
+  "eco": "Go",
+  "lang": "go",
+  "cwe": "CWE-94",
+  "fixed": "1.7.6",
+  "vuln_tag": "v1.7.5",
+  "fix_tag": "v1.7.6",
+  "repo": "https://github.com/go-gitea/gitea",
+  "src": "bench/src/GHSA-hpmr-prr2-cqc4",
+  "truth_mode": "pr",
+  "truth": [
+   {
+    "file": "models/repo.go",
+    "lines": [
+     [
+      1069,
+      1070
+     ]
+    ]
+   },
+   {
+    "file": "models/repo_mirror.go",
+    "lines": [
+     [
+      23,
+      23
+     ],
+     [
+      59,
+      59
+     ],
+     [
+      74,
+      75
+     ],
+     [
+      78,
+      78
+     ],
+     [
+      87,
+      87
+     ],
+     [
+      96,
+      96
+     ],
+     [
+      118,
+      121
+     ],
+     [
+      124,
+      125
+     ],
+     [
+      202,
+      202
+     ],
+     [
+      206,
+      206
+     ],
+     [
+      220,
+      220
+     ],
+     [
+      239,
+      239
+     ],
+     [
+      253,
+      253
+     ],
+     [
+      269,
+      269
+     ],
+     [
+      335,
+      335
+     ],
+     [
+      356,
+      356
+     ],
+     [
+      386,
+      386
+     ],
+     [
+      391,
+      391
+     ],
+     [
+      396,
+      396
+     ],
+     [
+      413,
+      413
+     ]
+    ]
+   },
+   {
+    "file": "routers/repo/setting.go",
+    "lines": [
+     [
+      143,
+      143
+     ]
+    ]
+   }
+  ],
+  "aliases": [
+   "CVE-2019-11229",
+   "GO-2022-0846"
+  ],
+  "summary": "Gitea Remote Code Execution"
+ },
+ {
+  "id": "GHSA-w8xw-7crf-h23x",
+  "pkg": "github.com/go-gitea/gitea",
+  "eco": "Go",
+  "lang": "go",
+  "cwe": "CWE-88",
+  "fixed": "1.17.3",
+  "vuln_tag": "v1.17.2",
+  "fix_tag": "v1.17.3",
+  "repo": "https://github.com/go-gitea/gitea",
+  "src": "bench/src/GHSA-w8xw-7crf-h23x",
+  "truth_mode": "pr",
+  "truth": [
+   {
+    "file": "modules/git/command.go",
+    "lines": [
+     [
+      92,
+      92
+     ]
+    ]
+   },
+   {
+    "file": "modules/git/commit.go",
+    "lines": [
+     [
+      166,
+      166
+     ]
+    ]
+   },
+   {
+    "file": "modules/git/repo_commit.go",
+    "lines": [
+     [
+      161,
+      161
+     ],
+     [
+      211,
+      217
+     ]
+    ]
+   },
+   {
+    "file": "modules/git/repo_stats.go",
+    "lines": [
+     [
+      62,
+      62
+     ],
+     [
+      64,
+      64
+     ],
+     [
+      66,
+      66
+     ],
+     [
+      70,
+      70
+     ]
+    ]
+   },
+   {
+    "file": "modules/gitgraph/graph.go",
+    "lines": [
+     [
+      27,
+      27
+     ],
+     [
+      29,
+      29
+     ],
+     [
+      32,
+      32
+     ],
+     [
+      36,
+      36
+     ],
+     [
+      39,
+      39
+     ],
+     [
+      47,
+      47
+     ],
+     [
+      49,
+      49
+     ],
+     [
+      51,
+      51
+     ],
+     [
+      54,
+      55
+     ]
+    ]
+   }
+  ],
+  "aliases": [
+   "BIT-gitea-2022-42968",
+   "CVE-2022-42968",
+   "GO-2022-1065"
+  ],
+  "summary": "Gitea vulnerable to Argument Injection"
+ },
+ {
+  "id": "GHSA-36h2-95gj-w488",
+  "pkg": "github.com/go-gitea/gitea",
+  "eco": "Go",
+  "lang": "go",
+  "cwe": "CWE-601",
+  "fixed": "1.4.3",
+  "vuln_tag": "v1.4.2",
+  "fix_tag": "v1.4.3",
+  "repo": "https://github.com/go-gitea/gitea",
+  "src": "bench/src/GHSA-36h2-95gj-w488",
+  "truth_mode": "tagdiff",
+  "truth": [
+   {
+    "file": "routers/repo/view.go",
+    "lines": [
+     [
+      108,
+      108
+     ],
+     [
+      211,
+      211
+     ]
+    ]
+   },
+   {
+    "file": "routers/repo/webhook.go",
+    "lines": [
+     [
+      161,
+      161
+     ],
+     [
+      208,
+      208
+     ]
+    ]
+   },
+   {
+    "file": "routers/routes/routes.go",
+    "lines": [
+     [
+      449,
+      449
+     ]
+    ]
+   },
+   {
+    "file": "routers/user/auth.go",
+    "lines": [
+     [
+      346,
+      346
+     ],
+     [
+      436,
+      436
+     ]
+    ]
+   }
+  ],
+  "aliases": [
+   "BIT-gitea-2021-45328",
+   "CVE-2021-45328",
+   "GO-2022-0579"
+  ],
+  "summary": "Open redirect in Gitea"
+ },
+ {
+  "id": "GHSA-r3gq-wxqf-q4gh",
+  "pkg": "github.com/go-gitea/gitea",
+  "eco": "Go",
+  "lang": "go",
+  "cwe": "CWE-79",
+  "fixed": "1.5.1",
+  "vuln_tag": "v1.5.0",
+  "fix_tag": "v1.5.1",
+  "repo": "https://github.com/go-gitea/gitea",
+  "src": "bench/src/GHSA-r3gq-wxqf-q4gh",
+  "truth_mode": "pr",
+  "truth": [
+   {
+    "file": "modules/validation/binding.go",
+    "lines": [
+     [
+      43,
+      43
+     ],
+     [
+      50,
+      50
+     ],
+     [
+      56,
+      56
+     ],
+     [
+      73,
+      78
+     ]
+    ]
+   },
+   {
+    "file": "routers/repo/setting.go",
+    "lines": [
+     [
+      160,
+      160
+     ],
+     [
+      184,
+      184
+     ]
+    ]
+   }
+  ],
+  "aliases": [
+   "BIT-gitea-2021-45329",
+   "CVE-2021-45329",
+   "GO-2022-0314"
+  ],
+  "summary": "Cross-site Scripting in Gitea"
+ },
+ {
+  "id": "GHSA-q47x-6mqq-4w92",
+  "pkg": "github.com/go-gitea/gitea",
+  "eco": "Go",
+  "lang": "go",
+  "cwe": "CWE-20",
+  "fixed": "1.7.6",
+  "vuln_tag": "v1.7.5",
+  "fix_tag": "v1.7.6",
+  "repo": "https://github.com/go-gitea/gitea",
+  "src": "bench/src/GHSA-q47x-6mqq-4w92",
+  "truth_mode": "pr",
+  "truth": [
+   {
+    "file": "models/repo.go",
+    "lines": [
+     [
+      1069,
+      1070
+     ]
+    ]
+   },
+   {
+    "file": "models/repo_mirror.go",
+    "lines": [
+     [
+      23,
+      23
+     ],
+     [
+      59,
+      59
+     ],
+     [
+      74,
+      75
+     ],
+     [
+      78,
+      78
+     ],
+     [
+      87,
+      87
+     ],
+     [
+      96,
+      96
+     ],
+     [
+      118,
+      121
+     ],
+     [
+      124,
+      125
+     ],
+     [
+      202,
+      202
+     ],
+     [
+      206,
+      206
+     ],
+     [
+      220,
+      220
+     ],
+     [
+      239,
+      239
+     ],
+     [
+      253,
+      253
+     ],
+     [
+      269,
+      269
+     ],
+     [
+      335,
+      335
+     ],
+     [
+      356,
+      356
+     ],
+     [
+      386,
+      386
+     ],
+     [
+      391,
+      391
+     ],
+     [
+      396,
+      396
+     ],
+     [
+      413,
+      413
+     ]
+    ]
+   },
+   {
+    "file": "routers/repo/setting.go",
+    "lines": [
+     [
+      143,
+      143
+     ]
+    ]
+   }
+  ],
+  "aliases": [
+   "CVE-2019-11228",
+   "GO-2022-0862"
+  ],
+  "summary": "Gitea Improper Input Validation"
+ },
+ {
+  "id": "GHSA-7rp2-fm2h-wchj",
+  "pkg": "django",
+  "eco": "PyPI",
+  "lang": "python",
+  "cwe": "CWE-79",
+  "fixed": "1.11.21",
+  "vuln_tag": "1.11.20",
+  "fix_tag": "1.11.21",
+  "repo": "https://github.com/django/django",
+  "src": "bench/src/GHSA-7rp2-fm2h-wchj",
+  "truth_mode": "tagdiff",
+  "truth": [
+   {
+    "file": "django/contrib/admin/widgets.py",
+    "lines": [
+     [
+      80,
+      80
+     ],
+     [
+      316,
+      316
+     ],
+     [
+      324,
+      324
+     ],
+     [
+      332,
+      332
+     ],
+     [
+      342,
+      342
+     ],
+     [
+      359,
+      359
+     ]
+    ]
+   }
+  ],
+  "aliases": [
+   "CVE-2019-12308",
+   "PYSEC-2019-79"
+  ],
+  "summary": "Django Cross-site Scripting in AdminURLFieldWidget"
+ },
+ {
+  "id": "GHSA-vq3h-3q7v-9prw",
+  "pkg": "django",
+  "eco": "PyPI",
+  "lang": "python",
+  "cwe": "CWE-601",
+  "fixed": "1.4.13",
+  "vuln_tag": "1.4.12",
+  "fix_tag": "1.4.13",
+  "repo": "https://github.com/django/django",
+  "src": "bench/src/GHSA-vq3h-3q7v-9prw",
+  "truth_mode": "tagdiff",
+  "truth": [
+   {
+    "file": "django/core/handlers/base.py",
+    "lines": [
+     [
+      17,
+      18
+     ]
+    ]
+   },
+   {
+    "file": "django/http/utils.py",
+    "lines": [
+     [
+      21,
+      21
+     ],
+     [
+      33,
+      33
+     ],
+     [
+      35,
+      35
+     ],
+     [
+      37,
+      39
+     ],
+     [
+      41,
+      43
+     ],
+     [
+      45,
+      46
+     ],
+     [
+      48,
+      49
+     ],
+     [
+      51,
+      54
+     ],
+     [
+      56,
+      57
+     ],
+     [
+      59,
+      59
+     ],
+     [
+      61,
+      61
+     ],
+     [
+      63,
+      63
+     ],
+     [
+      65,
+      68
+     ],
+     [
+      70,
+      72
+     ],
+     [
+      74,
+      75
+     ],
+     [
+      77,
+      80
+     ],
+     [
+      82,
+      83
+     ],
+     [
+      86,
+      86
+     ]
+    ]
+   },
+   {
+    "file": "setup.py",
+    "lines": [
+     [
+      78,
+      78
+     ]
+    ]
+   }
+  ],
+  "aliases": [
+   "CVE-2014-3730",
+   "PYSEC-2014-20"
+  ],
+  "summary": "Django Allows Open Redirects"
+ },
+ {
+  "id": "GHSA-9cwg-mhxf-hh59",
+  "pkg": "django",
+  "eco": "PyPI",
+  "lang": "python",
+  "cwe": "CWE-601",
+  "fixed": "1.4.6",
+  "vuln_tag": "1.4.5",
+  "fix_tag": "1.4.6",
+  "repo": "https://github.com/django/django",
+  "src": "bench/src/GHSA-9cwg-mhxf-hh59",
+  "truth_mode": "tagdiff",
+  "truth": [
+   {
+    "file": "django/contrib/admin/tests.py",
+    "lines": [
+     [
+      64,
+      65
+     ]
+    ]
+   },
+   {
+    "file": "django/contrib/auth/hashers.py",
+    "lines": [
+     [
+      333,
+      333
+     ],
+     [
+      335,
+      336
+     ],
+     [
+      338,
+      340
+     ]
+    ]
+   },
+   {
+    "file": "django/utils/http.py",
+    "lines": [
+     [
+      231,
+      231
+     ],
+     [
+      237,
+      238
+     ]
+    ]
+   },
+   {
+    "file": "setup.py",
+    "lines": [
+     [
+      78,
+      78
+     ]
+    ]
+   }
+  ],
+  "aliases": [
+   "CVE-2013-6044",
+   "PYSEC-2013-21"
+  ],
+  "summary": "Django cross-site scripting (XSS) vulnerability via is_safe_url function "
+ },
+ {
+  "id": "GHSA-rv95-896h-c2vc",
+  "pkg": "express",
+  "eco": "npm",
+  "lang": "javascript",
+  "cwe": "CWE-601",
+  "fixed": "4.19.2",
+  "vuln_tag": "4.19.1",
+  "fix_tag": "4.19.2",
+  "repo": "https://github.com/expressjs/express",
+  "src": "bench/src/GHSA-rv95-896h-c2vc",
+  "truth_mode": "tagdiff",
+  "truth": [
+   {
+    "file": "lib/response.js",
+    "lines": [
+     [
+      37,
+      37
+     ],
+     [
+      908,
+      908
+     ],
+     [
+      915,
+      917
+     ],
+     [
+      919,
+      924
+     ],
+     [
+      927,
+      928
+     ],
+     [
+      932,
+      933
+     ]
+    ]
+   },
+   {
+    "file": "test/res.location.js",
+    "lines": [
+     [
+      16,
+      16
+     ],
+     [
+      19,
+      19
+     ],
+     [
+      29,
+      29
+     ],
+     [
+      32,
+      32
+     ],
+     [
+      36,
+      36
+     ],
+     [
+      38,
+      38
+     ],
+     [
+      42,
+      42
+     ],
+     [
+      45,
+      45
+     ],
+     [
+      48,
+      49
+     ],
+     [
+      51,
+      55
+     ],
+     [
+      57,
+      57
+     ],
+     [
+      60,
+      64
+     ],
+     [
+      69,
+      73
+     ],
+     [
+      78,
+      79
+     ],
+     [
+      81,
+      82
+     ],
+     [
+      85,
+      85
+     ],
+     [
+      87,
+      88
+     ],
+     [
+      93,
+      93
+     ],
+     [
+      95,
+      95
+     ],
+     [
+      99,
+      99
+     ],
+     [
+      103,
+      103
+     ],
+     [
+      107,
+      107
+     ],
+     [
+      109,
+      109
+     ],
+     [
+      113,
+      113
+     ],
+     [
+      117,
+      117
+     ],
+     [
+      121,
+      121
+     ],
+     [
+      123,
+      123
+     ],
+     [
+      127,
+      127
+     ],
+     [
+      132,
+      132
+     ],
+     [
+      136,
+      136
+     ],
+     [
+      138,
+      138
+     ],
+     [
+      142,
+      142
+     ],
+     [
+      145,
+      145
+     ],
+     [
+      157,
+      157
+     ]
+    ]
+   }
+  ],
+  "aliases": [
+   "CVE-2024-29041"
+  ],
+  "summary": "Express.js Open Redirect in malformed URLs"
+ },
+ {
+  "id": "GHSA-7px7-7xjx-hxm8",
+  "pkg": "marked",
+  "eco": "npm",
+  "lang": "javascript",
+  "cwe": "CWE-79",
+  "fixed": "0.3.7",
+  "vuln_tag": "v0.3.6",
+  "fix_tag": "v0.3.7",
+  "repo": "https://github.com/markedjs/marked",
+  "src": "bench/src/GHSA-7px7-7xjx-hxm8",
+  "truth_mode": "tagdiff",
+  "truth": [
+   {
+    "file": "lib/marked.js",
+    "lines": [
+     [
+      878,
+      878
+     ]
+    ]
+   }
+  ],
+  "aliases": [
+   "CVE-2017-1000427"
+  ],
+  "summary": "Marked vulnerable to XSS from data URIs"
+ },
+ {
+  "id": "GHSA-qw6h-vgh9-j6wx",
+  "pkg": "express",
+  "eco": "npm",
+  "lang": "javascript",
+  "cwe": "CWE-79",
+  "fixed": "4.20.0",
+  "vuln_tag": "4.19.2",
+  "fix_tag": "4.20.0",
+  "repo": "https://github.com/expressjs/express",
+  "src": "bench/src/GHSA-qw6h-vgh9-j6wx",
+  "truth_mode": "tagdiff",
+  "truth": [
+   {
+    "file": "lib/response.js",
+    "lines": [
+     [
+      58,
+      58
+     ],
+     [
+      917,
+      918
+     ],
+     [
+      920,
+      922
+     ],
+     [
+      924,
+      924
+     ],
+     [
+      972,
+      972
+     ]
+    ]
+   },
+   {
+    "file": "test/express.static.js",
+    "lines": [
+     [
+      489,
+      489
+     ],
+     [
+      511,
+      511
+     ]
+    ]
+   },
+   {
+    "file": "test/express.urlencoded.js",
+    "lines": [
+     [
+      215,
+      215
+     ],
+     [
+      233,
+      233
+     ]
+    ]
+   },
+   {
+    "file": "test/res.location.js",
+    "lines": [
+     [
+      17,
+      17
+     ],
+     [
+      20,
+      20
+     ],
+     [
+      30,
+      30
+     ],
+     [
+      33,
+      33
+     ],
+     [
+      37,
+      37
+     ],
+     [
+      39,
+      39
+     ],
+     [
+      43,
+      43
+     ],
+     [
+      46,
+      46
+     ],
+     [
+      51,
+      51
+     ],
+     [
+      53,
+      53
+     ],
+     [
+      57,
+      57
+     ],
+     [
+      61,
+      61
+     ],
+     [
+      65,
+      65
+     ],
+     [
+      67,
+      67
+     ],
+     [
+      71,
+      71
+     ],
+     [
+      75,
+      75
+     ],
+     [
+      79,
+      79
+     ],
+     [
+      81,
+      81
+     ],
+     [
+      85,
+      85
+     ],
+     [
+      90,
+      90
+     ],
+     [
+      94,
+      94
+     ],
+     [
+      96,
+      96
+     ],
+     [
+      100,
+      100
+     ],
+     [
+      103,
+      103
+     ],
+     [
+      107,
+      110
+     ],
+     [
+      113,
+      113
+     ],
+     [
+      115,
+      116
+     ],
+     [
+      119,
+      122
+     ],
+     [
+      125,
+      125
+     ],
+     [
+      127,
+      128
+     ],
+     [
+      132,
+      133
+     ],
+     [
+      137,
+      137
+     ],
+     [
+      140,
+      140
+     ],
+     [
+      144,
+      145
+     ],
+     [
+      149,
+      149
+     ],
+     [
+      152,
+      152
+     ],
+     [
+      156,
+      157
+     ],
+     [
+      161,
+      161
+     ],
+     [
+      164,
+      164
+     ],
+     [
+      168,
+      169
+     ],
+     [
+      173,
+      173
+     ],
+     [
+      176,
+      176
+     ],
+     [
+      188,
+      188
+     ],
+     [
+      199,
+      199
+     ],
+     [
+      243,
+      244
+     ],
+     [
+      248,
+      248
+     ],
+     [
+      255,
+      255
+     ],
+     [
+      265,
+      266
+     ],
+     [
+      270,
+      270
+     ],
+     [
+      276,
+      277
+     ],
+     [
+      281,
+      281
+     ],
+     [
+      287,
+      288
+     ],
+     [
+      292,
+      292
+     ],
+     [
+      298,
+      299
+     ],
+     [
+      303,
+      303
+     ],
+     [
+      308,
+      310
+     ],
+     [
+      313,
+      314
+     ],
+     [
+      319,
+      321
+     ],
+     [
+      323,
+      325
+     ],
+     [
+      331,
+      332
+     ],
+     [
+      336,
+      336
+     ],
+     [
+      343,
+      343
+     ],
+     [
+      353,
+      354
+     ],
+     [
+      358,
+      358
+     ],
+     [
+      364,
+      365
+     ],
+     [
+      369,
+      369
+     ],
+     [
+      376,
+      376
+     ],
+     [
+      379,
+      379
+     ]
+    ]
+   },
+   {
+    "file": "test/res.redirect.js",
+    "lines": [
+     [
+      109,
+      109
+     ],
+     [
+      125,
+      125
+     ],
+     [
+      140,
+      140
+     ]
+    ]
+   }
+  ],
+  "aliases": [
+   "CVE-2024-43796"
+  ],
+  "summary": "express vulnerable to XSS via response.redirect()"
+ },
+ {
+  "id": "GHSA-xpfp-f569-q3p2",
+  "pkg": "django",
+  "eco": "PyPI",
+  "lang": "python",
+  "cwe": "CWE-89",
+  "fixed": "3.1.13",
+  "vuln_tag": "3.1.12",
+  "fix_tag": "3.1.13",
+  "repo": "https://github.com/django/django",
+  "src": "bench/src/GHSA-xpfp-f569-q3p2",
+  "truth_mode": "tagdiff",
+  "truth": [
+   {
+    "file": "django/db/models/sql/query.py",
+    "lines": [
+     [
+      33,
+      33
+     ],
+     [
+      1900,
+      1900
+     ]
+    ]
+   }
+  ],
+  "aliases": [
+   "BIT-django-2021-35042",
+   "CVE-2021-35042",
+   "PYSEC-2021-109"
+  ],
+  "summary": "SQL Injection in Django"
+ },
+ {
+  "id": "GHSA-cm22-4g7w-348p",
+  "pkg": "serve-static",
+  "eco": "npm",
+  "lang": "javascript",
+  "cwe": "CWE-79",
+  "fixed": "1.16.0",
+  "vuln_tag": "v1.15.0",
+  "fix_tag": "1.16.0",
+  "repo": "https://github.com/expressjs/serve-static",
+  "src": "bench/src/GHSA-cm22-4g7w-348p",
+  "truth_mode": "tagdiff",
+  "truth": [
+   {
+    "file": "index.js",
+    "lines": [
+     [
+      198,
+      199
+     ]
+    ]
+   }
+  ],
+  "aliases": [
+   "CVE-2024-43800"
+  ],
+  "summary": "serve-static vulnerable to template injection that can lead to XSS"
+ }
+]

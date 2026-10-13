@@ -12,19 +12,22 @@ Every claim ScanHub makes about detection comes from this repo. No curated scree
 | `ops/benchmark.py` | The harness: public REST API only, SHA-256-pinned app archive, regression gate |
 | `docs/detection-evidence.md` | The proof chain and the honest "what we do NOT claim" section |
 | `docs/benchmark-architecture.md` | The 3-tier benchmark design: replay, coverage, precision |
-| `evidence/replay-*.json` + `docs/bench-replay.md` | The CVE replay corpus: real CVEs in pinned versions, scored against our rules, published even though the score is low (it is our gap radar, not a detection claim) |
+| `evidence/replay-*.json` + `evidence/corpus.json` + `docs/bench-replay.md` | The CVE replay corpus: real CVEs in pinned versions, scored against our rules, published even though the score is low (it is our gap radar, not a detection claim) |
+| `ops/corpus_build.py`, `ops/replay_score.py`, `ops/corpus_qa.py` | The replay pipeline: build the corpus from OSV + fix commits, QA the ground truth, score TPR |
 
-## Headline numbers (verified 2026-10-11)
+## Headline numbers (verified 2026-10-11, replay round 3: 2026-10-13)
 
 - **84 findings** on OWASP Juice Shop (48 high, 36 medium), main-source only, zero fixture noise
 - **450 findings** on PyGoat across 4 engines (OSV, bandit, opengrep, gitleaks)
 - **69 original rules**, MIT-licensed, written from scratch (no restricted third-party rule content)
 - **4 candidate false positives** across ScanHub's own codebase under the precision tier, all audited as contextual (the code is safe in context)
+- **CVE replay: 0/13 detected** (round 3, 13 QA'd entries across Gitea, Django, Express, marked, serve-static). Pattern rules cannot follow multi-layer dataflow; we publish this instead of hiding it. Detection claims rest on the coverage and precision tiers.
 
 ## Reproduce it
 
 ```
 python ops/benchmark.py --url <your-instance> --token <api-token> --app juice-shop
+python ops/corpus_build.py && python ops/corpus_qa.py && python ops/replay_score.py
 ```
 
 The harness pins the benchmark app by SHA-256, uploads it through the public API, waits for the scan, and dumps a findings pack identical to the ones in `evidence/`. If our numbers don't reproduce on your instance, that's a bug and we want to hear about it.
