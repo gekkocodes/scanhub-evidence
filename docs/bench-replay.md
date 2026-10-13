@@ -1,4 +1,4 @@
-# ScanHub Bench — CVE replay benchmark
+# ScanHub Bench - CVE replay benchmark
 
 The headline benchmark: real CVEs in pinned vulnerable versions of popular
 open-source packages. Ground truth comes from the upstream fix commits, not

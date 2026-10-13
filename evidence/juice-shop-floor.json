@@ -1,7 +1,7 @@
 {
  "app": "juice-shop",
  "generated": "2026-10-13",
- "count": 124,
+ "count": 126,
  "findings": [
   {
    "rule": "rules.sh-gha-curl-pipe-shell",
@@ -884,6 +884,17 @@
    "verdict": "unreviewed"
   },
   {
+   "rule": "rules.sh-js-jwt-decode-unverified",
+   "severity": "high",
+   "cwe": "cwe-347",
+   "title": "sh-js-jwt-decode-unverified",
+   "message": "jwt.decode() performs no signature verification - use jwt.verify() before trusting claims",
+   "file": "juice-shop-master/routes/authenticatedUsers.ts",
+   "line": 20,
+   "engine": "opengrep",
+   "verdict": "unreviewed"
+  },
+  {
    "rule": "rules.sh-js-eval-call",
    "severity": "high",
    "cwe": "cwe-95",
@@ -1155,6 +1166,17 @@
    "message": "template compiled from dynamic string (pug.compile) - server-side template injection",
    "file": "juice-shop-master/routes/userProfile.ts",
    "line": 90,
+   "engine": "opengrep",
+   "verdict": "unreviewed"
+  },
+  {
+   "rule": "rules.sh-js-jwt-decode-unverified",
+   "severity": "high",
+   "cwe": "cwe-347",
+   "title": "sh-js-jwt-decode-unverified",
+   "message": "jwt.decode() performs no signature verification - use jwt.verify() before trusting claims",
+   "file": "juice-shop-master/routes/verify.ts",
+   "line": 119,
    "engine": "opengrep",
    "verdict": "unreviewed"
   },

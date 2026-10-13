@@ -566,6 +566,17 @@
    "verdict": "unreviewed"
   },
   {
+   "rule": "rules.sh-js-jwt-decode-unverified",
+   "severity": "high",
+   "cwe": "cwe-347",
+   "title": "Jwt.decode() performs no signature verification",
+   "message": "jwt.decode() performs no signature verification - use jwt.verify() before trusting claims",
+   "file": "juice-shop-master/routes/authenticatedUsers.ts",
+   "line": 20,
+   "engine": "opengrep",
+   "verdict": "unreviewed"
+  },
+  {
    "rule": "rules.sh-js-eval-call",
    "severity": "high",
    "cwe": "cwe-95",
@@ -753,11 +764,11 @@
    "verdict": "unreviewed"
   },
   {
-   "rule": "rules.sh-js-jwt-verify-disabled",
+   "rule": "rules.sh-js-jwt-decode-unverified, rules.sh-js-jwt-verify-disabled",
    "severity": "high",
    "cwe": "cwe-347",
-   "title": "JWT verification disabled or algorithm 'none'",
-   "message": "JWT verification disabled or algorithm 'none' - token forgery",
+   "title": "Jwt.decode() performs no signature verification",
+   "message": "jwt.decode() performs no signature verification - use jwt.verify() before trusting claims",
    "file": "juice-shop-master/routes/verify.ts",
    "line": 119,
    "engine": "opengrep",
@@ -786,22 +797,22 @@
    "verdict": "unreviewed"
   },
   {
-   "rule": "rules.sh-js-html-inject-concat",
+   "rule": "rules.sh-js-script-tag-strip-sanitizer",
    "severity": "high",
-   "cwe": "cwe-79",
-   "title": "HTML injection via string concatenation: user data spliced into markup contai...",
-   "message": "HTML injection via string concatenation: user data spliced into markup containing tags/attributes enables XSS.",
+   "cwe": "cwe-80",
+   "title": "Bypassable XSS sanitizer: stripping/replace-ing '<script' substrings does not...",
+   "message": "Bypassable XSS sanitizer: stripping/replace-ing '<script' substrings does not stop XSS (event handlers, <img onerror>, case tricks). Use a real sanitizer (DOMPurify) or context-aware escaping.",
    "file": "juice-shop-master/routes/videoHandler.ts",
    "line": 71,
    "engine": "opengrep",
    "verdict": "unreviewed"
   },
   {
-   "rule": "rules.sh-js-script-tag-strip-sanitizer",
+   "rule": "rules.sh-js-html-inject-concat",
    "severity": "high",
-   "cwe": "cwe-80",
-   "title": "Bypassable XSS sanitizer: stripping/replace-ing '<script' substrings does not...",
-   "message": "Bypassable XSS sanitizer: stripping/replace-ing '<script' substrings does not stop XSS (event handlers, <img onerror>, case tricks). Use a real sanitizer (DOMPurify) or context-aware escaping.",
+   "cwe": "cwe-79",
+   "title": "HTML injection via string concatenation: user data spliced into markup contai...",
+   "message": "HTML injection via string concatenation: user data spliced into markup containing tags/attributes enables XSS.",
    "file": "juice-shop-master/routes/videoHandler.ts",
    "line": 71,
    "engine": "opengrep",
@@ -1838,10 +1849,10 @@
    "verdict": "unreviewed"
   }
  ],
- "scan_id": "03061608-0890-45cc-acff-442fdf349a94",
+ "scan_id": "83b43920-e22d-4e67-b074-eb5ea277ec61",
  "severity_counts": {
   "critical": 20,
-  "high": 68,
+  "high": 69,
   "medium": 48,
   "low": 40
  },
@@ -1849,12 +1860,13 @@
  "app": "juice-shop",
  "app_zip_sha256": "528b302ebf8abc488e72da1ee226ea965e9c5bc47204b81f5205148648a1659b",
  "environment": {
-  "timestamp_utc": "2026-10-13T10:51:12.925359+00:00",
+  "timestamp_utc": "2026-10-13T11:31:29.270948+00:00",
   "host": "SIGMA",
   "python": "3.14.7",
   "opengrep": "1.16.4",
   "gitleaks": "gitleaks version v8.30.1",
   "rule_files": [
+   "batch4.yaml",
    "go-web.yaml",
    "go.yaml",
    "iac.yaml",
@@ -1866,7 +1878,7 @@
    "python.yaml",
    "redirect-sinks.yaml"
   ],
-  "rule_count": 72,
-  "scanhub_commit": "f4ca787"
+  "rule_count": 86,
+  "scanhub_commit": "03bc66a"
  }
 }
